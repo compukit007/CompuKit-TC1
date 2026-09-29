@@ -149,7 +149,9 @@ the LGT8F328P.
 ## Flashing
 
 The LGT8F328P is programmed via its SWD interface. It was tested with an
-**Arduino Nano used as ISP programmer** (stk500v1 protocol) and avrdude 8.3:
+**Arduino Nano running the LGTISP sketch** (the ISP programmer sketch for
+LGT8F chips, stk500v1 protocol) and avrdude 8.3. A normal "ArduinoISP"
+sketch can't program the LGT8F328P.
 
 ```bash
 avrdude -p m328p -c stk500v1 -P COM3 -b 115200 -U flash:w:TC1_LGT8F328P_AUTO_MEASURE_v19.15_en.hex:i
@@ -230,7 +232,7 @@ included in the source zip.
 ESR (в том числе на плате), проверка оптопар, напряжение и заряд батареи,
 крупное меню.
 
-Прошивка через Arduino Nano в качестве ISP-программатора (см. *Flashing*),
+Прошивка через Arduino Nano со скетчем **LGTISP** (см. *Flashing*),
 после прошивки **один раз выполнить калибровку** (долгое нажатие кнопки →
 Калибровка). При измерении ESR на плате: **питание выключить, конденсатор
 разрядить!**
@@ -245,7 +247,7 @@ TC1-stijl schermen in het **Nederlands, Engels en Russisch**, automatische
 IR-decoder, Zenertest, ESR-meting (ook in de schakeling), optocouplertest,
 accuspanning met percentage en een groot menu.
 
-Flashen met een Arduino Nano als ISP-programmer (zie *Flashing*), daarna
+Flashen met een Arduino Nano met de **LGTISP**-sketch (zie *Flashing*), daarna
 **één keer kalibreren** (knop lang indrukken → Kalibratie).
 Bij ESR-metingen in een schakeling: **print uit en condensator eerst
 ontladen!**
