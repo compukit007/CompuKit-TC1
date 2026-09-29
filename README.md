@@ -53,6 +53,43 @@ After leaving the menu a new test starts automatically.
 
 ---
 
+## Screenshots
+
+| Main menu (Russian) | Unknown / damaged part | NPN transistor with pin legend |
+|---|---|---|
+| ![Main menu](foto1_menu.png) | ![Unknown part](foto2_neizvestnaya_detal.png) | ![NPN](foto3_tranzistor.png) |
+
+| Testing screen | Opto coupler | ESR meter with safety warning |
+|---|---|---|
+| ![Testing](foto4_test.png) | ![Opto coupler](foto5_optopara.png) | ![ESR meter](foto6_izmerenie_esr.png) |
+
+| Zener test | Calibration |
+|---|---|
+| ![Zener test](foto7_stabilitron.png) | ![Calibration](foto8_kalibrovka.png) |
+
+Schematic of the LCR-TC1 REV 1A (factory schematic, used to verify the pinout):
+[TC1_MFT - REV 1A schema.jpg](TC1_MFT%20-%20REV%201A%20schema.jpg)
+
+---
+
+## Usage and menu
+
+- The button switches the tester on. The version screen is shown for 10 s
+  (skip it with the button), then measuring starts.
+- Put the part into ZIF holes numbered 1, 2 and 3; the order doesn't matter.
+- Short press: new measurement. The tester switches off after about 3 minutes
+  without activity.
+- **Open the menu:** hold the button for about half a second while a result
+  is shown.
+- **In the menu:** short press = next item, long press = select
+  ("long = select" hint at the bottom).
+- **Tools** (Zener test, ESR meter, opto coupler): 1× short = measure/start,
+  2× short = back.
+- Opto coupler: connect the LED cathode and the transistor emitter together
+  (PC817: pin 1 anode → hole 1, pins 2+3 → hole 2, pin 4 collector → hole 3).
+
+---
+
 ## Hardware (LCR-TC1, as verified on the board)
 
 | Function | LGT8F328P pin |
@@ -179,7 +216,8 @@ its LGT8F328P port. Modified by Compukit, September 2026 (v19.x).**
 All original copyright notices in the source files are kept intact.
 
 Licensed under the **EUPL v1.1** (European Union Public Licence), like the
-original m-firmware. See `LICENSE` (text) and `EUPL-v1.1.pdf` (original).
+original m-firmware. See `LICENSE` (text); the original `EUPL-v1.1.pdf` is
+included in the source zip.
 
 ---
 
